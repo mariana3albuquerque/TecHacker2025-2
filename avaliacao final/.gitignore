@@ -1,0 +1,71 @@
+# === Python básico ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# === Ambientes virtuais ===
+.venv/
+venv/
+env/
+ENV/
+
+# === Configurações e IDEs ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Logs e relatórios ===
+*.log
+/reports/
+/tmp/
+*.out
+*.err
+
+# === Arquivos temporários ===
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+
+# === Testes e cobertura ===
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# === Dependências de ferramentas externas ===
+/nmap-results/
+/nikto-results/
+
+# === Arquivos de container (se voltarem a existir) ===
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# === Arquivos exportados ===
+*.zip
+*.tar.gz
+
+# === Relatórios e dados sensíveis ===
+/reports/*.json
+/reports/*.md
+
+# === Documentação gerada ===
+docs/_build/

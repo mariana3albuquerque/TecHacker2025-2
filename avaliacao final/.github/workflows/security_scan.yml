@@ -1,0 +1,19 @@
+
+name: Web Security Scan
+on: [push]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r src/requirements.txt
+      - name: Run basic tests
+        run: pytest -q src/tests
+      - name: Dry-run scanner (safe)
+        run: python src/scanner.py --url https://example.com --dry-run --use-nmap --use-nikto
+      # To run actual nmap/nikto in CI you must explicitly install system packages (apt-get nmap nikto)
